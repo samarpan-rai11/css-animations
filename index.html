@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Hover Effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card" data-text="Lumbini" style="--img:url('images/lumbini.jpeg')"></div>
+        <div class="card" data-text="Khumbu" style="--img:url('images/khumbu.webp')"></div>
+        <div class="card" data-text="Nuwakot" style="--img:url('images/nuwakot.webp')"></div>
+        <div class="card" data-text="Tansen" style="--img:url('images/tansen.webp')"></div>
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.onmousemove = function(e){
+                const x = e.pageX - card.offsetLeft;
+                const y = e.pageY - card.offsetTop;
+
+                card.style.setProperty('--x', x + 'px');
+                card.style.setProperty('--y', y + 'px');
+            }
+        })
+    </script>
+</body>
+</html>
