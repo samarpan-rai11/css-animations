@@ -31,7 +31,8 @@ button.hexagon{
 
 button.hexagon:hover{
      color: rgba(25,25,25,1);
-     background: #2C093A40;
+     background: #2C093A40;  
+     /*first six numbers represent color and last two numbers represent the transparency percentage*/
 }
 
 .hexagon{
